@@ -29,17 +29,7 @@ const displayEntries = () => {
 		return row;
 	}).join("\n");
 
-	const table = `<table border="2px">
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Password</th>
-			<th>Date of Birth</th>
-			<th>Accepted Terms</th>
-		</tr>
-		${tableRows}
-	</table>`;
-
+	const table = `<table border="2px"><tr> <th>name</th> <th>Email</th> <th>Password</th> <th>dob</th> <th>accepted terms?</th> </tr> ${tableEntries} </table>`;
 	let entryDetails = document.getElementById("user-entries");
 	entryDetails.innerHTML = table;
 };
